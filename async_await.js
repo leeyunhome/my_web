@@ -6,18 +6,34 @@ function delayP(sec){
     });
 }
 
-function myFunc() {
-    return 'func';
+function normalFun() {
+    return 'wow';
 }
 async function myAsync() {
-    const time = await delayP(3);
-    console.log(time);
+    const result = await normalFun();
+    // const result = await delayP(3).then((time) => {
+    //     return 'x';
+    // });
+    console.log(result);
     return 'async';
 }
 
 myAsync().then((result) => {
     console.log(result);
-})
-// console.log(myFunc());
-// console.log(myAsync());
-// console.log(delayP(3));
+});
+
+// function myFunc() {
+//     return 'func';
+// }
+// async function myAsync() {
+//     const time = await delayP(3);
+//     console.log(time);
+//     return 'async';
+// }
+
+// myAsync().then((result) => {
+//     console.log(result);
+// })
+// // console.log(myFunc());
+// // console.log(myAsync());
+// // console.log(delayP(3));
