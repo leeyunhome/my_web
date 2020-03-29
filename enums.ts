@@ -93,3 +93,62 @@ enum Direction {
 //         // since the types 'E.Foo' and 'E.Bar have no overlap.
 //     }
 // }
+
+// enum E {
+//     X, Y, Z
+// }
+
+// function f(obj: { X: number, Y: number, Z: number }) {
+//     return obj.Z;
+// }
+
+// console.log(f(E));
+
+// enum LogLevel {
+//     ERROR, WARN, INFO, DEBUG
+// }
+
+// /**
+//  * This is equvalent to:
+//  * type LogLevelStrings = 'ERROR' | 'WARN' | 'INFO' | 'DEBUG'
+//  */
+// type LogLevelStrings = keyof typeof LogLevel;
+
+// function printImportant(key: LogLevelStrings, message: string) {
+//     const num = LogLevel[key];
+//     if (num <= LogLevel.WARN) {
+//         console.log('Log level key is: ', key);
+//         console.log('Log level value is: ', num);
+//         console.log('Log level message is: ', message);
+//     }
+// }
+
+// printImportant('ERROR', 'This is a message');
+
+// enum Enum {
+//     A
+// }
+// let a = Enum.A;
+// let nameOfA = Enum[a];
+
+// console.log(nameOfA);
+
+// const enum Enum {
+//     A = 1,
+//     B = A * 2
+// }
+
+// const enum Directions {
+//     Up,
+//     Down,
+//     Left,
+//     Right
+// }
+
+// let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right]
+
+declare enum Enum {
+    A = 1,
+    B,
+    C = 2
+}
